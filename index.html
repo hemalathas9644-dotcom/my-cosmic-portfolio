@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmic Portfolio Pro</title>
+    <style>
+        /* Logic: Moving Stars Animation */
+        @keyframes space-move {
+            from { background-position: 0 0; }
+            to { background-position: 0 -1000px; }
+        }
+
+        body {
+            background-color: #0b0d17;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            animation: space-move 60s linear infinite;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap; /* Screen chinna aana auto-va align aagum */
+            justify-content: center;
+        }
+
+        /* Glassmorphism Card Logic */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px); /* Background blur effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 280px;
+            text-align: center;
+            transition: 0.5s ease;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .card:hover {
+            transform: translateY(-20px); /* Mouse vecha mela thookum */
+            border-color: #00fbff;
+            box-shadow: 0 0 30px rgba(0, 251, 255, 0.2);
+        }
+
+        h2 { margin-bottom: 10px; font-size: 24px; }
+        p { color: #ccc; font-size: 14px; margin-bottom: 25px; }
+
+        .space-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #4f5b93;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resume-btn:hover { background: #1e3a8a; border-color: #3b82f6; }
+        .project-btn:hover { background: #581c87; border-color: #a855f7; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>MY RESUME</h2>
+            <p>Check out my technical skills and professional journey as a Full Stack Developer.</p>
+            <button class="space-btn resume-btn" id="resume">View Now</button>
+        </div>
+
+        <div class="card">
+            <h2>MY PROJECTS</h2>
+            <p>Explore my works like Fake News Detection and other Python applications.</p>
+            <button class="space-btn project-btn" id="projects">Explore</button>
+        </div>
+    </div>
+
+    <script>
+        const resumeBtn = document.getElementById('resume');
+        const projectBtn = document.getElementById('projects');
+
+        resumeBtn.addEventListener('click', function() {
+            alert("Redirecting to Resume...");
+            window.open("https://google.com", "_blank"); 
+        });
+
+        projectBtn.addEventListener('click', function() {
+            alert("Showing my latest projects!");
+            window.open("https://github.com", "_blank");
+        });
+    </script>
+</body>
+</html>
+
