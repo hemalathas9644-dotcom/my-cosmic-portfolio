@@ -90,19 +90,20 @@
         </div>
     </div>
 
-    <script>
+   <script>
         const resumeBtn = document.getElementById('resume');
         const projectBtn = document.getElementById('projects');
 
+        // Logic for Resume Button
         resumeBtn.addEventListener('click', function() {
-            // Logic: Open the uploaded PDF directly
             window.open("Hema-S-Resume-20260109.pdf", "_blank");
         });
-// Logic: Redirect to the Project PPT on GitHub
+
+        // Logic for Project Button
         projectBtn.addEventListener('click', function() {
             window.open("https://github.com/hemalathas9644-dotcom/my-cosmic-portfolio/blob/main/Real-time%20multi%20model%20fake%20news%20detection%20on%20social%20media%20platforms%20using%20unsupervised%20learning%20(1).pptx", "_blank");
         });
-        });
+        // Extra "});" ah thukkiachi!
     </script>
 </body>
 </html>
