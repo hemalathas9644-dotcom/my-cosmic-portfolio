@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cosmic Portfolio Pro</title>
+    <title>Hema's Cosmic Portfolio</title>
     <style>
-        /* Logic: Moving Stars Animation */
         @keyframes space-move {
             from { background-position: 0 0; }
             to { background-position: 0 -1000px; }
@@ -17,7 +16,6 @@
                 radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
             background-size: 550px 550px, 350px 350px;
             animation: space-move 60s linear infinite;
-            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,14 +28,13 @@
         .container {
             display: flex;
             gap: 30px;
-            flex-wrap: wrap; /* Screen chinna aana auto-va align aagum */
+            flex-wrap: wrap;
             justify-content: center;
         }
 
-        /* Glassmorphism Card Logic */
         .card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px); /* Background blur effect */
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 40px;
@@ -48,7 +45,7 @@
         }
 
         .card:hover {
-            transform: translateY(-20px); /* Mouse vecha mela thookum */
+            transform: translateY(-20px);
             border-color: #00fbff;
             box-shadow: 0 0 30px rgba(0, 251, 255, 0.2);
         }
@@ -71,7 +68,6 @@
 
         .resume-btn:hover { background: #1e3a8a; border-color: #3b82f6; }
         .project-btn:hover { background: #581c87; border-color: #a855f7; }
-
     </style>
 </head>
 <body>
@@ -80,31 +76,29 @@
         <div class="card">
             <h2>MY RESUME</h2>
             <p>Check out my technical skills and professional journey as a Full Stack Developer.</p>
-            <button class="space-btn resume-btn" id="resume">View Now</button>
+            <button class="space-btn resume-btn" id="resumeBtn">View Now</button>
         </div>
 
         <div class="card">
-            <h2>MY PROJECTS</h2>
-            <p>Explore my works like Fake News Detection and other Python applications.</p>
-            <button class="space-btn project-btn" id="projects">Explore</button>
+            <h2>PROJECT CODE</h2>
+            <p>View the Python source code and Machine Learning logic for Fake News Detection.</p>
+            <button class="space-btn project-btn" id="projectBtn">View Code</button>
         </div>
     </div>
 
-   <script>
-        const resumeBtn = document.getElementById('resume');
-        const projectBtn = document.getElementById('projects');
+    <script>
+        const resumeBtn = document.getElementById('resumeBtn');
+        const projectBtn = document.getElementById('projectBtn');
 
-        // Logic for Resume Button
+        // Logic: Open Resume PDF
         resumeBtn.addEventListener('click', function() {
             window.open("Hema-S-Resume-20260109.pdf", "_blank");
         });
 
-        // Logic for Project Button
+        // Logic: Open Your New Project Code Link
         projectBtn.addEventListener('click', function() {
-            window.open("https://github.com/hemalathas9644-dotcom/my-cosmic-portfolio/blob/main/Real-time%20multi%20model%20fake%20news%20detection%20on%20social%20media%20platforms%20using%20unsupervised%20learning%20(1).pptx", "_blank");
+            window.open("https://github.com/hemalathas9644-dotcom/fake-news-project", "_blank");
         });
-        // Extra "});" ah thukkiachi!
     </script>
 </body>
 </html>
-
