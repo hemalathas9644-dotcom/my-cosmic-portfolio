@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hema's Cosmic Portfolio</title>
     <style>
         @keyframes space-move {
@@ -17,9 +18,10 @@
             background-size: 550px 550px, 350px 350px;
             animation: space-move 60s linear infinite;
             display: flex;
+            flex-direction: column; /* Center column-ah maathunom to add WhatsApp button below */
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             color: white;
@@ -64,10 +66,24 @@
             border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .resume-btn:hover { background: #1e3a8a; border-color: #3b82f6; }
         .project-btn:hover { background: #581c87; border-color: #a855f7; }
+        
+        /* Hire Me Button Style */
+        .hire-btn {
+            margin-top: 40px;
+            background: #25D366; 
+            border-color: #128C7E;
+            font-weight: bold;
+        }
+        .hire-btn:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -86,16 +102,19 @@
         </div>
     </div>
 
+    <a href="https://wa.me/919176234083?text=Hi%20Hema,%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20create%20one%20for%20myself!" 
+       target="_blank" class="space-btn hire-btn">
+       🚀 Get Your Portfolio - Hire Me
+    </a>
+
     <script>
         const resumeBtn = document.getElementById('resumeBtn');
         const projectBtn = document.getElementById('projectBtn');
 
-        // Logic: Open Resume PDF
         resumeBtn.addEventListener('click', function() {
             window.open("Hema-S-Resume-20260109.pdf", "_blank");
         });
 
-        // Logic: Open Your New Project Code Link
         projectBtn.addEventListener('click', function() {
             window.open("https://github.com/hemalathas9644-dotcom/fake-news-project", "_blank");
         });
